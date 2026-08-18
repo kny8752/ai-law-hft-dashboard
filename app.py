@@ -7,7 +7,7 @@ import datetime
 
 def generate_sample_data():
     np.random.seed(42)
-    time_index = pd.date_range(start='2026-08-17 09:00:00', periods=100, freq='100L')
+    time_index = pd.date_range(start='2026-08-17 09:00:00', periods=100, freq='100ms')
     df = pd.DataFrame({
         'timestamp': time_index,
         'price': 50000 + np.cumsum(np.random.randn(100) * 50),
