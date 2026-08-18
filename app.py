@@ -24,7 +24,7 @@ def generate_sample_data():
     df.loc[70:75, 'buy_vol'] = df.loc[70:75, 'buy_vol'] * 5
     df.loc[70:75, 'current_vol'] = df.loc[70:75, 'current_vol'] * 4
     df.loc[75, 'position_reversed'] = True
-    df.loc[20:25, 'canceled_qty'] = df.loc[20:25, 'order_qty'] * 0.95
+    df.loc[20:25, 'canceled_qty'] = (df.loc[20:25, 'order_qty'] * 0.95).astype(int)
     df.loc[20:25, 'cancel_time_gap_ms'] = 30
     return df
 
